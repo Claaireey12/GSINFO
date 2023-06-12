@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://cdn.develop.gymshark.com",
+      "secure": true,
+      "changeOrigin": true
+    }
+  }

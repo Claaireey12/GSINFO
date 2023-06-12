@@ -1,0 +1,37 @@
+<!-- Main products page -->
+<div class="container-fluid">
+    <div class="card-group">
+        <div class="col-sm-3" *ngFor="let product of products">
+            <div class="card m-1">
+                <div class="card-body mx-auto">
+                    <!-- Unique ID show images for that product -->
+                    <div id="carousel{{ product.objectID }}" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" *ngFor="let media of product.media; let i = index"
+                                [ngClass]="{ active: i === 0 }">
+                                <img [src]="media.src" class="img-fluid" (error)="handleBrokenImg($event)">
+                                <span class="badge badge-warning products-badge" *ngFor="let label of product.labels">{{
+                                    replaceDashesWithSpaces([label.toUpperCase()]) }}</span>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel{{ product.objectID }}" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel{{ product.objectID }}" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <p class="mb-0">{{ product.title }}</p>
+                    <p class="mb-0 text-muted">{{ product.colour }}</p>
+                    <p><strong>£{{ product.price }}</strong></p>
+                    <!-- Open modal for that product -->
+                    <button (click)="openModal(product)" class="btn btn-dark btn-sm mx-auto">Quick view</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

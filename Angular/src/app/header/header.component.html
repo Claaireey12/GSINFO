@@ -1,0 +1,48 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-2">
+    <a class="navbar-brand" href="#">
+        <img src="https://cdn.gymshark.com/images/branding/gs-icon-black.svg" alt="..." height="36">
+    </a>
+    <!-- Hamburger menu when in mobile -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Nav bar links -->
+    <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Womens <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mens</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+            </li>
+        </ul>
+        <div class="float-right">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Message slider -->
+<div id="carouselExampleControls" class="carousel slide mb-3" data-ride="carousel" style="background-color: #555555;">
+    <div class="carousel-inner p-1">
+        <div class="carousel-item active">
+            <p class="d-block w-100 text-center text-white m-0" alt="First slide">Free standard shipping over £45</p>
+        </div>
+        <div class="carousel-item">
+            <p class="d-block w-100 text-center text-white m-0" alt="Second slide">Worldwide shipping available</p>
+        </div>
+        <div class="carousel-item">
+            <p class="d-block w-100 text-center text-white m-0" alt="Third slide">Students get 10% off</p>
+        </div>
+    </div>
+</div>
