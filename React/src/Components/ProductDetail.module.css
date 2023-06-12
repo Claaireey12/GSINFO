@@ -1,0 +1,91 @@
+h2 {
+    margin: 0 50px 10px 50px;
+    font-size: 1.3rem;
+  }
+
+  
+.info {
+    margin: 0 50px 0 50px;
+  }
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    max-height: 260px;
+  }  
+
+
+  .breadcrumbs {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .breadcrumbs ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .breadcrumbs li {
+    margin-right: 10px;
+  }
+  
+  .breadcrumbs li:last-child {
+    font-weight: bold;
+  }
+  
+  .breadcrumbs a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  .descriptionCont {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  button {
+    background-color: #989696;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  button:hover {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+  }
+
+  .sizeButton {
+    margin-right: 3px;
+    margin-bottom: 10px;
+  }
+
+  .sizeButton:focus {
+    background-color: #000000; 
+  }
+
+  .addButton {
+    margin-bottom: 10px;
+    background-color: rgb(88, 88, 226);
+  }
